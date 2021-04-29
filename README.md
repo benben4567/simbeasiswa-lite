@@ -1,5 +1,6 @@
 <div align="center">
-![SIMBEASISWA-1-removebg-preview.png](https://i.postimg.cc/sXt3pWLr/SIMBEASISWA-1-removebg-preview.png)
+<div align="center"><img src="https://i.postimg.cc/sXt3pWLr/SIMBEASISWA-1-removebg-preview.png" width="500">
+</div>
 </div>
 
 ## About
