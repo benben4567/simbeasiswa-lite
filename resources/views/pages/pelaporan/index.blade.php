@@ -19,9 +19,9 @@
             <div class="form-group">
               <label for="prodi">Program Studi</label>
               <select class="form-control selectric" name="prodi" id="prodi">
-                <option></option>
-                <option></option>
-                <option></option>
+                @foreach ($majors as $major)
+                  <option value="{{ $major->id }}">{{ $major->full_name }}</option>
+                @endforeach
               </select>
             </div>
             <div>
@@ -42,9 +42,9 @@
             <div class="form-group">
               <label for="jenis">Jenis Beasiswa</label>
               <select class="form-control selectric" name="jenis" id="jenis">
-                <option></option>
-                <option></option>
-                <option></option>
+                @foreach ($types as $type)
+                  <option value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
               </select>
             </div>
             <div>
