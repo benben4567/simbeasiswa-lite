@@ -160,6 +160,7 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-12">
+              Contoh format : <a href="{{ asset('storage/files/format_upload.xlsx') }}">format_upload.xlsx</a>
               <form action="{{ route('beasiswa.import-student') }}" method="post" enctype="multipart/form-data" id="form-import-penerima">
                 @csrf
                 <input type="hidden" name="id" value={{ $scholarship->id }}>
@@ -171,6 +172,7 @@
                   <small id="fileHelpId" class="form-text text-muted">Format: .xls | .xlsx</small>
                 </div>
               </form>
+              <blockquote>Upload file excel menggunakan contoh format diatas agar tidak terjadi error ketika proses import.</blockquote>
             </div>
           </div>
         </div>
