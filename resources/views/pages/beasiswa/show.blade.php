@@ -166,7 +166,7 @@
                 <input type="hidden" name="id" value={{ $scholarship->id }}>
                 <div class="form-group">
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="file" name="file">
+                    <input type="file" class="custom-file-input" id="file" name="file" accept=".xls, .xlsx" required>
                     <label class="custom-file-label" for="customFile">Pilih berkas</label>
                   </div>
                   <small id="fileHelpId" class="form-text text-muted">Format: .xls | .xlsx</small>
