@@ -78,7 +78,7 @@
     </div>
   </div>
 
-  <!-- Modal Tambah -->
+  <!-- Modal Edit -->
   <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -106,6 +106,44 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
           <button type="button" class="btn btn-primary" id="btn-simpan-edit">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Import -->
+  <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Import Mahasiswa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <div class="mb-2">
+                Contoh format : <a href="{{ asset('storage/files/format_upload_beasiswa.xlsx') }}">format_upload_beasiswa.xlsx</a>
+              </div>
+              <form action="{{ route('jenis-beasiswa.import') }}" method="post" id="form-import-jenis" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="file" name="file" accept=".xls, .xlsx" required>
+                    <label class="custom-file-label" for="customFile">Pilih berkas</label>
+                  </div>
+                  <small id="fileHelpId" class="form-text text-muted">Format: .xls | .xlsx</small>
+                </div>
+              </form>
+              <blockquote>Upload file excel menggunakan contoh format diatas agar tidak terjadi error ketika proses import.</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-primary" id="btn-import">Import</button>
         </div>
       </div>
     </div>
