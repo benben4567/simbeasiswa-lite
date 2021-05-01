@@ -38,6 +38,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'jenis-beasiswa', 'as' => 'jen
   Route::get('/', [App\Http\Controllers\ScholarshipTypeController::class, 'index'])->name('index');
   Route::post('/', [App\Http\Controllers\ScholarshipTypeController::class, 'store'])->name('store');
   Route::put('/', [App\Http\Controllers\ScholarshipTypeController::class, 'update'])->name('update');
+  Route::post('/import', [App\Http\Controllers\ScholarshipTypeController::class, 'import'])->name('import');
 });
 
 // Program Studi
