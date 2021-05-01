@@ -16,6 +16,13 @@ $(document).ready(function () {
         action: function ( e, dt, node, config ) {
             $('#modal1').modal('show');
         }
+      },
+      {
+        text: '<i class="fas fa-file-excel"></i> Import',
+        className: "btn btn-success btn-sm ml-2",
+        action: function ( e, dt, node, config ) {
+            $('#modal3').modal('show');
+        }
       }
     ]
   });
@@ -40,6 +47,16 @@ $(document).ready(function () {
   // Button Simpan - Modal Edit
   $('#btn-simpan-edit').on('click', function () {
     $("#form-edit-jenis").submit();
+  });
+
+  // Button Import - Modal Import
+  $('#btn-import').on('click', function () {
+    $("#form-import-jenis").submit();
+  });
+
+  $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
   });
 
   // Auto dismiss alert
