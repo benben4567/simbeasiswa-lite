@@ -62,7 +62,7 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>
-                      <a href="#"><strong>{{ $std->nama }}</strong></a></br>
+                      <a href="{{ route('mahasiswa.show', ['id' => $std->id]) }}"><strong>{{ $std->nama }}</strong></a></br>
                       <div>NIM. {{ $std->nim }}</div>
                     </td>
                     <td>{{ $std->major->full_name }}</td>
