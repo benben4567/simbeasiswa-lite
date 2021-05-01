@@ -23,6 +23,6 @@ class Student extends Model
 
     public function setNamaAttribute($nama)
     {
-      return $this->attributes['nama'] = strtoupper($nama);
+      return $this->attributes['nama'] = strtoupper(trim($nama));
     }
 }
