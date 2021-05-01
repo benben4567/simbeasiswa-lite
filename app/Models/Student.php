@@ -20,4 +20,9 @@ class Student extends Model
     {
       return $this->belongsToMany(Scholarship::class);
     }
+
+    public function setNamaAttribute($nama)
+    {
+      return $this->attributes['nama'] = strtoupper($nama);
+    }
 }
